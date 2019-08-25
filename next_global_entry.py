@@ -10,7 +10,7 @@ import requests
 from twilio.rest import Client
 import config
    
-def test_and_send(time):
+def test_and_send(time,j,k):
     current_time = datetime.datetime.strptime(config.\
                                               search_dict[k]['times'][j]\
                                               ,'%Y-%m-%dT%H:%M')
@@ -37,9 +37,9 @@ if __name__ == '__main__':
                         if config.search_dict[k]['times'][j] in config.exclusion_dict[k]['times']:
                             continue
                         else:
-                            test_and_send(next_time_datetime)
+                            test_and_send(next_time_datetime,j,k)
                     else:
-                        test_and_send(next_time_datetime)
+                        test_and_send(next_time_datetime,j,k)
             except:
                 continue
     sys.exit(1)
