@@ -11,8 +11,19 @@ search_dict = {
 				"San Francisco": \
                     {"id": 5446, \
                      "times": [""]\
-                               }
+                               },
+				"San Diego": \
+                    {"id": 13541,\
+                     "times":[""]\
+                     },
 				}
+                    
+exclusion_dict = {
+                    "San Francisco": \
+                    {"id": 5446,\
+                     "times":[]\
+                     }
+                }
 
 # don't edit this
 global_entry_query_url = "https://ttp.cbp.dhs.gov/schedulerapi/slots?\
